@@ -30,12 +30,39 @@ body {
     right: -50vw;
     transform: scale(0.35);
 
-}
-
-#sw-js-blob-svg2{
-    top: -160vh;
+  }
+  
+  #sw-js-blob-svg2{
+    top: -157vh;
     right: -70vw;
     transform: scale(0.06) rotate(90deg);
+  }
+  
+  .learningSection{
+    margin-top: 30vh;  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+  }
+  
+  .learnCard{
+      width: 23vw;
+      height: 60vh;
+      border-radius: 1vw 1vw 8vw 8vw;
+      background-color: #5a358c ;
+    }
+h4{
+  color: #120926;
+  font-size: 5vh;
+  display: flex;
+  justify-content: center;
+}
+
+h3{
+  font-size: 8vh;
+  color: #5a358c;
 }
 
 h2{
@@ -56,6 +83,7 @@ h1{
     opacity: 50%;
 }
 
+
 .mainText{
     margin-top: 15vh;
     margin-left: 10vw;
@@ -67,6 +95,39 @@ h1{
     margin-top: -10vh;
     text-align:center;
     margin-left: -47vw;
+}
+
+@property --progress-value {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+@keyframes progress {
+ to { --progress-value: 75; }
+}
+
+.progress-bar {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: #8256bf;
+  font-family: 'Titillium Web', sans-serif;
+  background: 
+    radial-gradient(closest-side, #120926 79%, transparent 80% 100%),
+    conic-gradient(hotpink calc(var(--progress-value) * 1%), pink 0);
+  animation: progress 2s 1 forwards;
+}
+
+.progress-bar::before {
+  counter-reset: percentage var(--progress-value);
+  content: counter(percentage) '%';
+  animation: progress 2s 1 forwards;
 }
 
 
