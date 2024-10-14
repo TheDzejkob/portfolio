@@ -3,17 +3,41 @@ body {
     background-image: linear-gradient(to top, #120926, #1f173e, #302157, #442b72, #5a358c);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 220vh;
+    height: 280vh;
     margin: 0;
   }
   
+.socky{
+  margin-top: 178vh;
+  margin-left: 3vw;
+}
+.ig{
+  margin-left: 4vw;
+}
+.x{
+  margin-left: 8vw;
+}
+.linkedIn{
+  margin-left: 12vw;
+}
+
+.sipkos{
+  font-size: 10vh;
+  color:#5a358c;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -50vh;
+}
+
   .ractangle {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #120926;
-    height: 200vh;
+    height: 260vh;
     width: 190vh;
     border-radius: 5vh;
     
@@ -37,9 +61,55 @@ body {
     right: -70vw;
     transform: scale(0.06) rotate(90deg);
   }
+  #sw-js-blob-svg3{
+    top: 90vh;
+    right: 70vw;
+    transform: scale(1.1) rotate(280deg);
+
+  }
+
+  #sw-js-blob-svg4{
+    top: -10vh;
+    right: -70vw;
+    transform: scale(0.2) rotate(330deg);
+  }
+  
+  
+  .projectSection{
+    position: absolute;
+    margin-top: 80vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .projectCard{
+    background-color: #5a358c ;
+    width: 20vw;
+    height: 50vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    border-radius: 1vw 1vw 9vw 9vw;
+    text-align: center;
+  }
+  
+  .githubSVG{
+    scale: 3;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+h5{
+  font-size: 8vh;
+  margin-bottom: 2vh;
+  color:#5a358c;
+  display: flex;
+  justify-content: center;
+}
   
   .learningSection{
-    margin-top: 30vh;  
+    margin-top: 0vh;  
     position: absolute;
     top: 50%;
     left: 50%;
@@ -52,17 +122,24 @@ body {
       height: 60vh;
       border-radius: 1vw 1vw 8vw 8vw;
       background-color: #5a358c ;
+      margin-left: 1vw;
+      margin-right: 1vw;
     }
 h4{
   color: #120926;
-  font-size: 5vh;
+  font-size: 6vh;
+  margin-top: 1vh;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 h3{
   font-size: 8vh;
   color: #5a358c;
+  display: flex;
+  justify-content: center;
+
 }
 
 h2{
@@ -83,6 +160,25 @@ h1{
     opacity: 50%;
 }
 
+.cards{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#cardPodtext{
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  color: #120926;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.barDiv{
+  display: flex;
+  justify-content: center;
+  margin-top: -6vh;
+}
 
 .mainText{
     margin-top: 15vh;
@@ -97,30 +193,20 @@ h1{
     margin-left: -47vw;
 }
 
-@property --progress-value {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}
-
-@keyframes progress {
- to { --progress-value: 75; }
-}
-
 .progress-bar {
   margin-top: 2vh;
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  color: #8256bf;
+  color: #120926;
   font-family: 'Titillium Web', sans-serif;
+  font-weight: bold;
   background: 
-    radial-gradient(closest-side, #120926 79%, transparent 80% 100%),
-    conic-gradient(hotpink calc(var(--progress-value) * 1%), pink 0);
+      radial-gradient(closest-side, #5a358c 79%, transparent 80% 100%),
+      conic-gradient(#120926 calc(var(--progress-value) * 1%), #8256bf 0);
   animation: progress 2s 1 forwards;
 }
 
@@ -130,6 +216,10 @@ h1{
   animation: progress 2s 1 forwards;
 }
 
+@keyframes progress {
+  to { --progress-value: var(--progress-value); }
+}
+  
 
 
 .titillium-web-extralight {
