@@ -206,7 +206,7 @@ h1{
   font-weight: bold;
   background: 
       radial-gradient(closest-side, #5a358c 79%, transparent 80% 100%),
-      conic-gradient(#120926 calc(var(--progress-value) * 1%), #8256bf 0);
+      conic-gradient(#8256bf calc(var(--progress-value) * 1%), #120926 0);
   animation: progress 2s 1 forwards;
 }
 
